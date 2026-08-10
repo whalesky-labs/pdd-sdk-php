@@ -1,0 +1,21 @@
+<?php
+
+declare(strict_types=1);
+
+namespace PddSdk\Auth;
+
+final class TokenResponse
+{
+    /**
+     * @param array<string, mixed> $raw
+     */
+    public function __construct(
+        public readonly string $accessToken,
+        public readonly ?string $refreshToken,
+        public readonly ?int $expiresIn,
+        public readonly ?int $refreshExpiresIn,
+        public readonly ?int $ownerId,
+        public readonly ?string $ownerName,
+        public readonly array $raw,
+    ) {}
+}

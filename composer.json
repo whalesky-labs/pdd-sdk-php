@@ -1,0 +1,55 @@
+{
+    "name": "whalesky-labs/pdd-sdk-php",
+    "description": "PHP SDK for Pinduoduo Open Platform.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "pinduoduo",
+        "pdd",
+        "ecommerce",
+        "openapi",
+        "sdk",
+        "php"
+    ],
+    "homepage": "https://github.com/whalesky-labs/pdd-sdk-php",
+    "authors": [
+        {
+            "name": "westng"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/whalesky-labs/pdd-sdk-php/issues",
+        "source": "https://github.com/whalesky-labs/pdd-sdk-php"
+    },
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.9"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PddSdk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PddSdk\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "generate:api-client": "php scripts/generate-api-client-methods.php",
+        "generate:api-client-check": "php scripts/generate-api-client-methods.php --check",
+        "cs-fix": "php-cs-fixer fix --config=.php-cs-fixer.php",
+        "cs-check": "php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff",
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
+}

@@ -1,0 +1,2438 @@
+{
+    "source": "https://open.pinduoduo.com/application/document/api",
+    "categories": [
+        {
+            "id": 1,
+            "name": "订单API",
+            "namespace": "Order"
+        },
+        {
+            "id": 2,
+            "name": "售后API",
+            "namespace": "AfterSales"
+        },
+        {
+            "id": 3,
+            "name": "物流API",
+            "namespace": "Logistics"
+        },
+        {
+            "id": 4,
+            "name": "虚拟类目API",
+            "namespace": "Virtual"
+        },
+        {
+            "id": 5,
+            "name": "商品API",
+            "namespace": "Goods"
+        },
+        {
+            "id": 12,
+            "name": "多多客API",
+            "namespace": "Ddk"
+        },
+        {
+            "id": 13,
+            "name": "多多客工具API",
+            "namespace": "DdkTools"
+        },
+        {
+            "id": 15,
+            "name": "营销API",
+            "namespace": "Marketing"
+        },
+        {
+            "id": 16,
+            "name": "卡券API",
+            "namespace": "Voucher"
+        },
+        {
+            "id": 17,
+            "name": "发票服务API",
+            "namespace": "Invoice"
+        },
+        {
+            "id": 18,
+            "name": "店铺API",
+            "namespace": "Shop"
+        },
+        {
+            "id": 20,
+            "name": "工具API",
+            "namespace": "Tools"
+        },
+        {
+            "id": 21,
+            "name": "仓储API",
+            "namespace": "Warehouse"
+        },
+        {
+            "id": 22,
+            "name": "消息服务API",
+            "namespace": "Message"
+        },
+        {
+            "id": 23,
+            "name": "电子面单API",
+            "namespace": "ElectronicWaybill"
+        },
+        {
+            "id": 24,
+            "name": "财务API",
+            "namespace": "Finance"
+        },
+        {
+            "id": 26,
+            "name": "短信服务API",
+            "namespace": "Sms"
+        },
+        {
+            "id": 30,
+            "name": "服务市场API",
+            "namespace": "ServiceMarket"
+        },
+        {
+            "id": 32,
+            "name": "短信供应商API",
+            "namespace": "SmsProvider"
+        },
+        {
+            "id": 43,
+            "name": "电子面单代打API",
+            "namespace": "WaybillPrinting"
+        },
+        {
+            "id": 46,
+            "name": "门店API",
+            "namespace": "Store"
+        },
+        {
+            "id": 48,
+            "name": "多多国际API",
+            "namespace": "International"
+        },
+        {
+            "id": 49,
+            "name": "旅游门票API",
+            "namespace": "Travel"
+        },
+        {
+            "id": 57,
+            "name": "自媒体API",
+            "namespace": "WeMedia"
+        },
+        {
+            "id": 62,
+            "name": "视频推荐API",
+            "namespace": "VideoRecommendation"
+        },
+        {
+            "id": 64,
+            "name": "方舟数据传输API",
+            "namespace": "ArkDataTransfer"
+        },
+        {
+            "id": 65,
+            "name": "商家寄件API",
+            "namespace": "MerchantShipping"
+        }
+    ],
+    "apis": {
+        "pdd.cloud.print": {
+            "name": "云打印",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.cloud.print",
+            "updated_at": 1701332520000
+        },
+        "pdd.cloud.print.task.query": {
+            "name": "云打印任务查询",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.cloud.print.task.query",
+            "updated_at": 1698667466000
+        },
+        "pdd.cloud.print.verify.code": {
+            "name": "云打印验证码",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.cloud.print.verify.code",
+            "updated_at": 1701332520000
+        },
+        "pdd.cloud.printer.bind": {
+            "name": "云打印机绑定",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.cloud.printer.bind",
+            "updated_at": 1702438830000
+        },
+        "pdd.cloud.printer.setting": {
+            "name": "云打印机设置",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.cloud.printer.setting",
+            "updated_at": 1684638976000
+        },
+        "pdd.cloud.printer.status.query": {
+            "name": "云打印机状态查询",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.cloud.printer.status.query",
+            "updated_at": 1671528074000
+        },
+        "pdd.cloudprint.customares.get": {
+            "name": "获取商家的自定义区模板信息",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.cloudprint.customares.get",
+            "updated_at": 1675567187000
+        },
+        "pdd.cloudprint.stdtemplates.get": {
+            "name": "获取所有标准电子面单模板",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.cloudprint.stdtemplates.get",
+            "updated_at": 1619594690000
+        },
+        "pdd.conso.waybill.intercept.apply": {
+            "name": "偏远集运快递拦截请求下发",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.conso.waybill.intercept.apply",
+            "updated_at": 1729137076000
+        },
+        "pdd.cross.cabinet.recycle.order": {
+            "name": "快递柜包裹回收订单",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.cross.cabinet.recycle.order",
+            "updated_at": 1753254240000
+        },
+        "pdd.cross.pack.store.operate.notification": {
+            "name": "港澳便利店站点包裹操作通知接口",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.cross.pack.store.operate.notification",
+            "updated_at": 1762757164000
+        },
+        "pdd.customs.send.goods.record": {
+            "name": "海淘服务商上传商品备案信息",
+            "category_id": 48,
+            "category_name": "多多国际API",
+            "namespace": "International",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.customs.send.goods.record",
+            "updated_at": 1657612659000
+        },
+        "pdd.ddk.all.order.list.increment.get": {
+            "name": "查询所有授权的多多客订单",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.all.order.list.increment.get",
+            "updated_at": 1778158611000
+        },
+        "pdd.ddk.cashgift.create": {
+            "name": "创建多多礼金",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.cashgift.create",
+            "updated_at": 1740657151000
+        },
+        "pdd.ddk.cashgift.data.query": {
+            "name": "查询多多礼金效果数据",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.cashgift.data.query",
+            "updated_at": 1740657151000
+        },
+        "pdd.ddk.cashgift.status.update": {
+            "name": "多多礼金状态更新",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.cashgift.status.update",
+            "updated_at": 1617171716000
+        },
+        "pdd.ddk.cms.prom.url.generate": {
+            "name": "生成商城-频道推广链接",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.cms.prom.url.generate",
+            "updated_at": 1782394472000
+        },
+        "pdd.ddk.goods.detail": {
+            "name": "多多进宝商品详情查询",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.goods.detail",
+            "updated_at": 1780985844000
+        },
+        "pdd.ddk.goods.pid.generate": {
+            "name": "创建多多进宝推广位",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.goods.pid.generate",
+            "updated_at": 1605496524000
+        },
+        "pdd.ddk.goods.pid.query": {
+            "name": "查询已经生成的推广位信息",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.goods.pid.query",
+            "updated_at": 1617348281000
+        },
+        "pdd.ddk.goods.promotion.right.auth": {
+            "name": "多多进宝信息流渠道备案授权素材上传接口",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.goods.promotion.right.auth",
+            "updated_at": 1665199409000
+        },
+        "pdd.ddk.goods.promotion.url.generate": {
+            "name": "多多进宝推广链接生成",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.goods.promotion.url.generate",
+            "updated_at": 1784273742000
+        },
+        "pdd.ddk.goods.recommend.get": {
+            "name": "多多进宝商品推荐API",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.goods.recommend.get",
+            "updated_at": 1780985844000
+        },
+        "pdd.ddk.goods.search": {
+            "name": "多多进宝商品查询",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.goods.search",
+            "updated_at": 1780985844000
+        },
+        "pdd.ddk.goods.zs.unit.url.gen": {
+            "name": "多多进宝转链接口",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.goods.zs.unit.url.gen",
+            "updated_at": 1726285132000
+        },
+        "pdd.ddk.member.authority.query": {
+            "name": "查询是否绑定备案",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.member.authority.query",
+            "updated_at": 1623762901000
+        },
+        "pdd.ddk.oauth.cashgift.create": {
+            "name": "创建多多礼金",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.cashgift.create",
+            "updated_at": 1740657151000
+        },
+        "pdd.ddk.oauth.cashgift.status.update": {
+            "name": "多多礼金状态更新",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.cashgift.status.update",
+            "updated_at": 1617171716000
+        },
+        "pdd.ddk.oauth.cms.prom.url.generate": {
+            "name": "生成商城推广链接接口",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.cms.prom.url.generate",
+            "updated_at": 1657609530000
+        },
+        "pdd.ddk.oauth.goods.detail": {
+            "name": "多多进宝商品详情查询",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.goods.detail",
+            "updated_at": 1780985844000
+        },
+        "pdd.ddk.oauth.goods.pid.generate": {
+            "name": "多多进宝推广位创建接口",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.goods.pid.generate",
+            "updated_at": 1618239286000
+        },
+        "pdd.ddk.oauth.goods.pid.query": {
+            "name": "多多客已生成推广位信息查询",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.goods.pid.query",
+            "updated_at": 1621922685000
+        },
+        "pdd.ddk.oauth.goods.prom.url.generate": {
+            "name": "生成多多进宝推广链接",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.goods.prom.url.generate",
+            "updated_at": 1761724776000
+        },
+        "pdd.ddk.oauth.goods.recommend.get": {
+            "name": "运营频道商品查询API",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.goods.recommend.get",
+            "updated_at": 1780985844000
+        },
+        "pdd.ddk.oauth.goods.search": {
+            "name": "多多进宝商品查询",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.goods.search",
+            "updated_at": 1780985844000
+        },
+        "pdd.ddk.oauth.goods.zs.unit.url.gen": {
+            "name": "多多进宝转链接口",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.goods.zs.unit.url.gen",
+            "updated_at": 1726285132000
+        },
+        "pdd.ddk.oauth.member.authority.query": {
+            "name": "查询是否绑定备案",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.member.authority.query",
+            "updated_at": 1597395442000
+        },
+        "pdd.ddk.oauth.order.detail.get": {
+            "name": "获取订单详情",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.order.detail.get",
+            "updated_at": 1778158611000
+        },
+        "pdd.ddk.oauth.order.list.increment.get": {
+            "name": "按照更新时间段增量同步推广订单信息",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.order.list.increment.get",
+            "updated_at": 1770606171000
+        },
+        "pdd.ddk.oauth.pid.mediaid.bind": {
+            "name": "批量绑定推广位的媒体id",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.pid.mediaid.bind",
+            "updated_at": 1617348281000
+        },
+        "pdd.ddk.oauth.resource.url.gen": {
+            "name": "拼多多主站频道推广接口",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.resource.url.gen",
+            "updated_at": 1648126759000
+        },
+        "pdd.ddk.oauth.rp.prom.url.generate": {
+            "name": "生成营销工具推广链接",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.rp.prom.url.generate",
+            "updated_at": 1770606171000
+        },
+        "pdd.ddk.oauth.weapp.qrcode.url.gen": {
+            "name": "多多客工具生成单品推广小程序二维码",
+            "category_id": 13,
+            "category_name": "多多客工具API",
+            "namespace": "DdkTools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.oauth.weapp.qrcode.url.gen",
+            "updated_at": 1651147326000
+        },
+        "pdd.ddk.order.detail.get": {
+            "name": "查询订单详情",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.order.detail.get",
+            "updated_at": 1779176247000
+        },
+        "pdd.ddk.order.list.increment.get": {
+            "name": "最后更新时间段增量同步推广订单信息",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.order.list.increment.get",
+            "updated_at": 1779176247000
+        },
+        "pdd.ddk.order.list.range.get": {
+            "name": "用时间段查询推广订单接口",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.order.list.range.get",
+            "updated_at": 1770606171000
+        },
+        "pdd.ddk.pid.mediaid.bind": {
+            "name": "批量绑定推广位的媒体id",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.pid.mediaid.bind",
+            "updated_at": 1617348281000
+        },
+        "pdd.ddk.promotion.goods.query": {
+            "name": "多多进宝信息流投放商品报备进度查询",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.promotion.goods.query",
+            "updated_at": 1690981374000
+        },
+        "pdd.ddk.report.img.upload": {
+            "name": "多多客信息流投放备案图片上传接口",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.report.img.upload",
+            "updated_at": 1664421183000
+        },
+        "pdd.ddk.report.video.upload": {
+            "name": "多多客信息流投放备案视频上传接口",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.report.video.upload",
+            "updated_at": 1664421183000
+        },
+        "pdd.ddk.report.video.upload.part": {
+            "name": "多多客信息流投放备案视频上传分片上传接口",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.report.video.upload.part",
+            "updated_at": 1664421183000
+        },
+        "pdd.ddk.report.video.upload.part.complete": {
+            "name": "多多客信息流投放备案视频上传分片完成接口",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.report.video.upload.part.complete",
+            "updated_at": 1664421183000
+        },
+        "pdd.ddk.report.video.upload.part.init": {
+            "name": "多多客信息流投放备案视频上传分片初始化接口",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.report.video.upload.part.init",
+            "updated_at": 1664421183000
+        },
+        "pdd.ddk.resource.url.gen": {
+            "name": "生成多多进宝频道推广",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.resource.url.gen",
+            "updated_at": 1782394472000
+        },
+        "pdd.ddk.rp.prom.url.generate": {
+            "name": "生成营销工具推广链接",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.rp.prom.url.generate",
+            "updated_at": 1785760931000
+        },
+        "pdd.ddk.statistics.data.query": {
+            "name": "多多进宝数据统计查询接口",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.statistics.data.query",
+            "updated_at": 1639451209000
+        },
+        "pdd.ddk.tmc.activity.list": {
+            "name": "千万神券活动数据列表",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.tmc.activity.list",
+            "updated_at": 1657605878000
+        },
+        "pdd.ddk.url.short.parse": {
+            "name": "多多进宝推广短链解析",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.url.short.parse",
+            "updated_at": 1781164282000
+        },
+        "pdd.ddk.weapp.qrcode.url.gen": {
+            "name": "多多客生成单品推广小程序二维码url",
+            "category_id": 12,
+            "category_name": "多多客API",
+            "namespace": "Ddk",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ddk.weapp.qrcode.url.gen",
+            "updated_at": 1616071760000
+        },
+        "pdd.delete.draft.commit": {
+            "name": "删除草稿接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.delete.draft.commit",
+            "updated_at": 1640505045000
+        },
+        "pdd.delete.goods.commit": {
+            "name": "删除商品接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.delete.goods.commit",
+            "updated_at": 1540297392000
+        },
+        "pdd.delivery.receipt.image.upload": {
+            "name": "发货底单图片上传",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.delivery.receipt.image.upload",
+            "updated_at": 1756360058000
+        },
+        "pdd.einvoice.info.query": {
+            "name": "自动开票发票查询",
+            "category_id": 17,
+            "category_name": "发票服务API",
+            "namespace": "Invoice",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.einvoice.info.query",
+            "updated_at": 1625983515000
+        },
+        "pdd.erp.order.list.get": {
+            "name": "订单列表查询接口",
+            "category_id": 64,
+            "category_name": "方舟数据传输API",
+            "namespace": "ArkDataTransfer",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.erp.order.list.get",
+            "updated_at": 1765357818000
+        },
+        "pdd.erp.order.sync": {
+            "name": "erp打单信息同步",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.erp.order.sync",
+            "updated_at": 1774426988000
+        },
+        "pdd.erp.oub.list.get": {
+            "name": "出库单列表查询接口",
+            "category_id": 64,
+            "category_name": "方舟数据传输API",
+            "namespace": "ArkDataTransfer",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.erp.oub.list.get",
+            "updated_at": 1765357818000
+        },
+        "pdd.erp.refund.list.get": {
+            "name": "售后列表查询接口",
+            "category_id": 64,
+            "category_name": "方舟数据传输API",
+            "namespace": "ArkDataTransfer",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.erp.refund.list.get",
+            "updated_at": 1765357818000
+        },
+        "pdd.express.add.depot": {
+            "name": "增加仓库",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.express.add.depot",
+            "updated_at": 1540907168000
+        },
+        "pdd.express.change.depot.info": {
+            "name": "修改仓库信息",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.express.change.depot.info",
+            "updated_at": 1540299541000
+        },
+        "pdd.express.depot.info.get": {
+            "name": "仓库详细信息",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.express.depot.info.get",
+            "updated_at": 1618326294000
+        },
+        "pdd.express.depot.list.get": {
+            "name": "仓库列表",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.express.depot.list.get",
+            "updated_at": 1540471107000
+        },
+        "pdd.express.search.depot": {
+            "name": "根据仓库名称和仓库编码查询仓库",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.express.search.depot",
+            "updated_at": 1540383555000
+        },
+        "pdd.fds.order.get": {
+            "name": "订单详情",
+            "category_id": 43,
+            "category_name": "电子面单代打API",
+            "namespace": "WaybillPrinting",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.fds.order.get",
+            "updated_at": 1698249778000
+        },
+        "pdd.fds.order.list.get": {
+            "name": "根据更新时间查询订单列表",
+            "category_id": 43,
+            "category_name": "电子面单代打API",
+            "namespace": "WaybillPrinting",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.fds.order.list.get",
+            "updated_at": 1698249778000
+        },
+        "pdd.fds.role.get": {
+            "name": "查询店铺身份",
+            "category_id": 43,
+            "category_name": "电子面单代打API",
+            "namespace": "WaybillPrinting",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.fds.role.get",
+            "updated_at": 1597561764000
+        },
+        "pdd.fds.waybill.cancel": {
+            "name": "电子面单取消回传",
+            "category_id": 43,
+            "category_name": "电子面单代打API",
+            "namespace": "WaybillPrinting",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.fds.waybill.cancel",
+            "updated_at": 1597561764000
+        },
+        "pdd.fds.waybill.get": {
+            "name": "电子面单取号",
+            "category_id": 43,
+            "category_name": "电子面单代打API",
+            "namespace": "WaybillPrinting",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.fds.waybill.get",
+            "updated_at": 1597561764000
+        },
+        "pdd.fds.waybill.return": {
+            "name": "电子面单回传",
+            "category_id": 43,
+            "category_name": "电子面单代打API",
+            "namespace": "WaybillPrinting",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.fds.waybill.return",
+            "updated_at": 1597561764000
+        },
+        "pdd.fds.waybill.return.slave": {
+            "name": "电子面单回传额外运单号",
+            "category_id": 43,
+            "category_name": "电子面单代打API",
+            "namespace": "WaybillPrinting",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.fds.waybill.return.slave",
+            "updated_at": 1635078371000
+        },
+        "pdd.finance.balance.daily.bill.url.get": {
+            "name": "商家货款日账单下载链接查询接口",
+            "category_id": 24,
+            "category_name": "财务API",
+            "namespace": "Finance",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.finance.balance.daily.bill.url.get",
+            "updated_at": 1630986461000
+        },
+        "pdd.goods.add": {
+            "name": "商品新增接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.add",
+            "updated_at": 1778569482000
+        },
+        "pdd.goods.authorization.cats": {
+            "name": "获取当前授权商家可发布的商品类目信息",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.authorization.cats",
+            "updated_at": 1591177638000
+        },
+        "pdd.goods.cat.rule.get": {
+            "name": "类目商品发布规则查询接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.cat.rule.get",
+            "updated_at": 1778589943000
+        },
+        "pdd.goods.cat.template.get": {
+            "name": "获取商品类目属性(已废弃)",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.cat.template.get",
+            "updated_at": 1618326294000
+        },
+        "pdd.goods.cats.get": {
+            "name": "商品标准类目接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.cats.get",
+            "updated_at": 1618326294000
+        },
+        "pdd.goods.child.sku.edit": {
+            "name": "日历库存子SKU新增及编辑接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.child.sku.edit",
+            "updated_at": 1734576169000
+        },
+        "pdd.goods.commit.detail.get": {
+            "name": "获取商品提交的商品详情",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.commit.detail.get",
+            "updated_at": 1741092300000
+        },
+        "pdd.goods.commit.list.get": {
+            "name": "草稿列表接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.commit.list.get",
+            "updated_at": 1747384947000
+        },
+        "pdd.goods.commit.status.get": {
+            "name": "草稿状态查询接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.commit.status.get",
+            "updated_at": 1618239286000
+        },
+        "pdd.goods.country.get": {
+            "name": "商品地区/国家接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.country.get",
+            "updated_at": 1629202993000
+        },
+        "pdd.goods.cps.mall.unit.change": {
+            "name": "修改全店推广API",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.cps.mall.unit.change",
+            "updated_at": 1618239286000
+        },
+        "pdd.goods.cps.mall.unit.query": {
+            "name": "查询全店推广API",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.cps.mall.unit.query",
+            "updated_at": 1618239286000
+        },
+        "pdd.goods.cps.unit.change": {
+            "name": "修改商品推广API",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.cps.unit.change",
+            "updated_at": 1620356840000
+        },
+        "pdd.goods.cps.unit.create": {
+            "name": "设置单品推广API",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.cps.unit.create",
+            "updated_at": 1620356840000
+        },
+        "pdd.goods.cps.unit.delete": {
+            "name": "删除单品计划接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.cps.unit.delete",
+            "updated_at": 1618239286000
+        },
+        "pdd.goods.cps.unit.query": {
+            "name": "查询商品推广API",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.cps.unit.query",
+            "updated_at": 1618326294000
+        },
+        "pdd.goods.detail.get": {
+            "name": "商品明细",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.detail.get",
+            "updated_at": 1778569470000
+        },
+        "pdd.goods.edit.goods.commit": {
+            "name": "新增或编辑草稿接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.edit.goods.commit",
+            "updated_at": 1778569462000
+        },
+        "pdd.goods.file.info.get": {
+            "name": "文件详情查询",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.file.info.get",
+            "updated_at": 1623812773000
+        },
+        "pdd.goods.filespace.image.upload": {
+            "name": "图片上传到图片空间",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.filespace.image.upload",
+            "updated_at": 1585038651000
+        },
+        "pdd.goods.get.relation": {
+            "name": "商品映射查询接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.get.relation",
+            "updated_at": 1662036578000
+        },
+        "pdd.goods.image.upload": {
+            "name": "商品图片上传接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.image.upload",
+            "updated_at": 1540365891000
+        },
+        "pdd.goods.img.upload": {
+            "name": "商品图片上传接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.img.upload",
+            "updated_at": 1602839036000
+        },
+        "pdd.goods.information.get": {
+            "name": "商品详情接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.information.get",
+            "updated_at": 1559448360000
+        },
+        "pdd.goods.information.update": {
+            "name": "商品编辑",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.information.update",
+            "updated_at": 1778569477000
+        },
+        "pdd.goods.latest.commit.status.get": {
+            "name": "批量goodsId查询最新的审核状态",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.latest.commit.status.get",
+            "updated_at": 1648190379000
+        },
+        "pdd.goods.list.get": {
+            "name": "商品列表接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.list.get",
+            "updated_at": 1657803040000
+        },
+        "pdd.goods.logistics.ser.template.detail": {
+            "name": "商品送装服务模版详情",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.logistics.ser.template.detail",
+            "updated_at": 1626751184000
+        },
+        "pdd.goods.logistics.ser.template.list": {
+            "name": "商品送装服务模版列表",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.logistics.ser.template.list",
+            "updated_at": 1626751184000
+        },
+        "pdd.goods.logistics.template.create": {
+            "name": "创建商品物流模版",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.logistics.template.create",
+            "updated_at": 1629169193000
+        },
+        "pdd.goods.logistics.template.get": {
+            "name": "商品运费模版接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.logistics.template.get",
+            "updated_at": 1642509560000
+        },
+        "pdd.goods.material.create": {
+            "name": "商品素材创建接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.material.create",
+            "updated_at": 1586174904000
+        },
+        "pdd.goods.material.delete": {
+            "name": "商品素材删除接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.material.delete",
+            "updated_at": 1586174892000
+        },
+        "pdd.goods.material.query": {
+            "name": "商品素材列表查询",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.material.query",
+            "updated_at": 1586174881000
+        },
+        "pdd.goods.opt.get": {
+            "name": "查询商品标签列表",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.opt.get",
+            "updated_at": 1618326294000
+        },
+        "pdd.goods.outer.cat.mapping.get": {
+            "name": "类目预测接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.outer.cat.mapping.get",
+            "updated_at": 1685350854000
+        },
+        "pdd.goods.price.check": {
+            "name": "商品价格核实",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.price.check",
+            "updated_at": 1618198780000
+        },
+        "pdd.goods.quantity.update": {
+            "name": "商品库存更新接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.quantity.update",
+            "updated_at": 1774331704000
+        },
+        "pdd.goods.sale.status.set": {
+            "name": "商品上架状态设置",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.sale.status.set",
+            "updated_at": 1540322181000
+        },
+        "pdd.goods.sizespec.class.get": {
+            "name": "尺码表分类查询",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.sizespec.class.get",
+            "updated_at": 1583291580000
+        },
+        "pdd.goods.sizespec.meta.get": {
+            "name": "尺码组和尺码参数查询",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.sizespec.meta.get",
+            "updated_at": 1583306304000
+        },
+        "pdd.goods.sizespec.templates.get": {
+            "name": "自定义尺码表模版列表",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.sizespec.templates.get",
+            "updated_at": 1583306274000
+        },
+        "pdd.goods.sku.price.update": {
+            "name": "修改商品sku价格",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.sku.price.update",
+            "updated_at": 1734922484000
+        },
+        "pdd.goods.skus.get": {
+            "name": "根据skuId查询sku详情",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.skus.get",
+            "updated_at": 1657803040000
+        },
+        "pdd.goods.sn.img.upload": {
+            "name": "商品sn/imei图片上传",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.sn.img.upload",
+            "updated_at": 1752225663000
+        },
+        "pdd.goods.spec.get": {
+            "name": "商品属性类目接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.spec.get",
+            "updated_at": 1540365634000
+        },
+        "pdd.goods.spec.id.get": {
+            "name": "生成商家自定义的规格",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.spec.id.get",
+            "updated_at": 1540365738000
+        },
+        "pdd.goods.spu.get": {
+            "name": "标品详情接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.spu.get",
+            "updated_at": 1601215962000
+        },
+        "pdd.goods.spu.search": {
+            "name": "标品搜索接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.spu.search",
+            "updated_at": 1639884170000
+        },
+        "pdd.goods.submit.goods.commit": {
+            "name": "编辑并提交草稿接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.submit.goods.commit",
+            "updated_at": 1778569456000
+        },
+        "pdd.goods.template.property.value.search": {
+            "name": "模板属性值搜索接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.template.property.value.search",
+            "updated_at": 1614672517000
+        },
+        "pdd.goods.video.upload": {
+            "name": "商品视频上传接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.goods.video.upload",
+            "updated_at": 1557237468000
+        },
+        "pdd.gooods.sku.measurement.list": {
+            "name": "商品sku计量单位枚举",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.gooods.sku.measurement.list",
+            "updated_at": 1626751184000
+        },
+        "pdd.invoice.application.query": {
+            "name": "开票申请单查询",
+            "category_id": 17,
+            "category_name": "发票服务API",
+            "namespace": "Invoice",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.invoice.application.query",
+            "updated_at": 1770732799000
+        },
+        "pdd.invoice.detail.invalid": {
+            "name": "订单发票冲红",
+            "category_id": 17,
+            "category_name": "发票服务API",
+            "namespace": "Invoice",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.invoice.detail.invalid",
+            "updated_at": 1770732799000
+        },
+        "pdd.invoice.detail.upload": {
+            "name": "开票结果回传",
+            "category_id": 17,
+            "category_name": "发票服务API",
+            "namespace": "Invoice",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.invoice.detail.upload",
+            "updated_at": 1765978433000
+        },
+        "pdd.live.img.mall.upload": {
+            "name": "多多视频商家上传图片接口",
+            "category_id": 57,
+            "category_name": "自媒体API",
+            "namespace": "WeMedia",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.live.img.mall.upload",
+            "updated_at": 1722415454000
+        },
+        "pdd.live.video.mall.create": {
+            "name": "多多视频商家发布视频",
+            "category_id": 57,
+            "category_name": "自媒体API",
+            "namespace": "WeMedia",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.live.video.mall.create",
+            "updated_at": 1749384111000
+        },
+        "pdd.live.video.mall.querymallvideoauditstatus": {
+            "name": "查询商家视频的审核状态",
+            "category_id": 57,
+            "category_name": "自媒体API",
+            "namespace": "WeMedia",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.live.video.mall.querymallvideoauditstatus",
+            "updated_at": 1728895565000
+        },
+        "pdd.live.video.mall.upload.part": {
+            "name": "多多视频商家上传视频分片上传接口",
+            "category_id": 57,
+            "category_name": "自媒体API",
+            "namespace": "WeMedia",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.live.video.mall.upload.part",
+            "updated_at": 1722415454000
+        },
+        "pdd.live.video.mall.upload.part.complete": {
+            "name": "多多视频商家上传视频分片完成接口",
+            "category_id": 57,
+            "category_name": "自媒体API",
+            "namespace": "WeMedia",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.live.video.mall.upload.part.complete",
+            "updated_at": 1722415454000
+        },
+        "pdd.live.video.mall.upload.part.init": {
+            "name": "多多视频商家上传视频分片初始化接口",
+            "category_id": 57,
+            "category_name": "自媒体API",
+            "namespace": "WeMedia",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.live.video.mall.upload.part.init",
+            "updated_at": 1722415454000
+        },
+        "pdd.logistics.address.get": {
+            "name": "获取拼多多标准地址库",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.address.get",
+            "updated_at": 1618326294000
+        },
+        "pdd.logistics.available.company.recommend": {
+            "name": "获取可发货快递接口",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.available.company.recommend",
+            "updated_at": 1642928442000
+        },
+        "pdd.logistics.companies.get": {
+            "name": "快递公司查看接口",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.companies.get",
+            "updated_at": 1562037482000
+        },
+        "pdd.logistics.isv.trace.notify.sub": {
+            "name": "ISV物流轨迹推送消息订阅接口",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.isv.trace.notify.sub",
+            "updated_at": 1594303100000
+        },
+        "pdd.logistics.online.send": {
+            "name": "订单发货通知接口",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.online.send",
+            "updated_at": 1774331813000
+        },
+        "pdd.logistics.onlinedelivery.courier.query": {
+            "name": "查询可选快递公司",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.courier.query",
+            "updated_at": 1761720197000
+        },
+        "pdd.logistics.onlinedelivery.payment.status": {
+            "name": "免密支付状态查询接口",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.payment.status",
+            "updated_at": 1761720197000
+        },
+        "pdd.logistics.onlinedelivery.predict.price": {
+            "name": "查询快递公司预估金额",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.predict.price",
+            "updated_at": 1761720197000
+        },
+        "pdd.logistics.onlinedelivery.receipt.cancel": {
+            "name": "取消寄件接口",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.receipt.cancel",
+            "updated_at": 1765768092000
+        },
+        "pdd.logistics.onlinedelivery.receipt.create": {
+            "name": "商家寄件寄件单下单接口",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.receipt.create",
+            "updated_at": 1782885718000
+        },
+        "pdd.logistics.onlinedelivery.receipt.detail": {
+            "name": "寄件单详情接口",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.receipt.detail",
+            "updated_at": 1761837677000
+        },
+        "pdd.logistics.onlinedelivery.receipt.list": {
+            "name": "查询已寄件寄件单列表",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.receipt.list",
+            "updated_at": 1761837677000
+        },
+        "pdd.logistics.onlinedelivery.receipt.not.pay.list": {
+            "name": "查询待支付寄件单列表",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.receipt.not.pay.list",
+            "updated_at": 1761837677000
+        },
+        "pdd.logistics.onlinedelivery.receipt.trigger.pay": {
+            "name": "商家主动支付接口",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.receipt.trigger.pay",
+            "updated_at": 1761720197000
+        },
+        "pdd.logistics.onlinedelivery.send.address.query": {
+            "name": "获取商家发货地址信息",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.send.address.query",
+            "updated_at": 1761720197000
+        },
+        "pdd.logistics.onlinedelivery.subsiby.appeal.result": {
+            "name": "商家寄件补贴活动账单申诉结果推送",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.subsiby.appeal.result",
+            "updated_at": 1765699083000
+        },
+        "pdd.logistics.onlinedelivery.subsiby.shipbill.send": {
+            "name": "商家寄件补贴活动快递公司账单下发接口",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.subsiby.shipbill.send",
+            "updated_at": 1765699083000
+        },
+        "pdd.logistics.onlinedelivery.subsiby.weight.appeal": {
+            "name": "商家寄件补贴活动重量申诉接口",
+            "category_id": 65,
+            "category_name": "商家寄件API",
+            "namespace": "MerchantShipping",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.onlinedelivery.subsiby.weight.appeal",
+            "updated_at": 1784702978000
+        },
+        "pdd.logistics.ordertrace.get": {
+            "name": "轨迹查询接口",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.logistics.ordertrace.get",
+            "updated_at": 1618239286000
+        },
+        "pdd.mall.cps.protocol.status.query": {
+            "name": "查询店铺是否签署多多进宝协议接口",
+            "category_id": 18,
+            "category_name": "店铺API",
+            "namespace": "Shop",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mall.cps.protocol.status.query",
+            "updated_at": 1618239286000
+        },
+        "pdd.mall.info.bonded.warehouse.get": {
+            "name": "保税仓信息查询接口",
+            "category_id": 48,
+            "category_name": "多多国际API",
+            "namespace": "International",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mall.info.bonded.warehouse.get",
+            "updated_at": 1555594240000
+        },
+        "pdd.mall.info.get": {
+            "name": "店铺信息接口",
+            "category_id": 18,
+            "category_name": "店铺API",
+            "namespace": "Shop",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mall.info.get",
+            "updated_at": 1616473119000
+        },
+        "pdd.mall.info.group.add.store.post": {
+            "name": "门店组添加门店",
+            "category_id": 46,
+            "category_name": "门店API",
+            "namespace": "Store",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mall.info.group.add.store.post",
+            "updated_at": 1571317540000
+        },
+        "pdd.mall.info.group.list.store.get": {
+            "name": "查询门店组下门店",
+            "category_id": 46,
+            "category_name": "门店API",
+            "namespace": "Store",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mall.info.group.list.store.get",
+            "updated_at": 1571317468000
+        },
+        "pdd.mall.info.group.query.post": {
+            "name": "查询店铺下门店组列表",
+            "category_id": 46,
+            "category_name": "门店API",
+            "namespace": "Store",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mall.info.group.query.post",
+            "updated_at": 1650899725000
+        },
+        "pdd.mall.info.group.remove.store.get": {
+            "name": "门店组删除门店",
+            "category_id": 46,
+            "category_name": "门店API",
+            "namespace": "Store",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mall.info.group.remove.store.get",
+            "updated_at": 1571317633000
+        },
+        "pdd.mall.info.store.create.post.nopoi": {
+            "name": "开放平台无PoiId创建门店",
+            "category_id": 46,
+            "category_name": "门店API",
+            "namespace": "Store",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mall.info.store.create.post.nopoi",
+            "updated_at": 1658472950000
+        },
+        "pdd.mall.info.store.get": {
+            "name": "开放平台查询门店信息",
+            "category_id": 46,
+            "category_name": "门店API",
+            "namespace": "Store",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mall.info.store.get",
+            "updated_at": 1578279944000
+        },
+        "pdd.mall.info.store.update.post.nopoi": {
+            "name": "开放平台无PoiId编辑门店",
+            "category_id": 46,
+            "category_name": "门店API",
+            "namespace": "Store",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mall.info.store.update.post.nopoi",
+            "updated_at": 1584330477000
+        },
+        "pdd.mall.notification.type.show.check": {
+            "name": "判断是否对商家展示某个通知",
+            "category_id": 18,
+            "category_name": "店铺API",
+            "namespace": "Shop",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mall.notification.type.show.check",
+            "updated_at": 1655174777000
+        },
+        "pdd.mille.query.buy.order.split.bill.amount": {
+            "name": "查询采购单预计分账金额",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.mille.query.buy.order.split.bill.amount",
+            "updated_at": 1759893459000
+        },
+        "pdd.nextone.logistics.warehouse.update": {
+            "name": "退货入库",
+            "category_id": 2,
+            "category_name": "售后API",
+            "namespace": "AfterSales",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.nextone.logistics.warehouse.update",
+            "updated_at": 1612407633000
+        },
+        "pdd.one.express.cost.template": {
+            "name": "按id获取商品运费模版接口",
+            "category_id": 5,
+            "category_name": "商品API",
+            "namespace": "Goods",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.one.express.cost.template",
+            "updated_at": 1545119638000
+        },
+        "pdd.open.decrypt.batch": {
+            "name": "批量数据解密接口",
+            "category_id": 20,
+            "category_name": "工具API",
+            "namespace": "Tools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.open.decrypt.batch",
+            "updated_at": 1653895127000
+        },
+        "pdd.open.decrypt.mask.batch": {
+            "name": "批量数据解密脱敏接口",
+            "category_id": 20,
+            "category_name": "工具API",
+            "namespace": "Tools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.open.decrypt.mask.batch",
+            "updated_at": 1599637712000
+        },
+        "pdd.open.kms.encrypt.batch": {
+            "name": "批量加密",
+            "category_id": 20,
+            "category_name": "工具API",
+            "namespace": "Tools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.open.kms.encrypt.batch",
+            "updated_at": 1599634959000
+        },
+        "pdd.open.msg.send.result.receive": {
+            "name": "短信回执",
+            "category_id": 26,
+            "category_name": "短信服务API",
+            "namespace": "Sms",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.open.msg.send.result.receive",
+            "updated_at": 1777532410000
+        },
+        "pdd.open.msg.service.send.express.msg": {
+            "name": "根据运单号发短信",
+            "category_id": 26,
+            "category_name": "短信服务API",
+            "namespace": "Sms",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.open.msg.service.send.express.msg",
+            "updated_at": 1780908746000
+        },
+        "pdd.open.virtual.number.check": {
+            "name": "虚拟号查询接口",
+            "category_id": 20,
+            "category_name": "工具API",
+            "namespace": "Tools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.open.virtual.number.check",
+            "updated_at": 1639980847000
+        },
+        "pdd.order.account.attachment.upload": {
+            "name": "政府补贴订单台账附件上传接口",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.account.attachment.upload",
+            "updated_at": 1785400565000
+        },
+        "pdd.order.basic.list.get": {
+            "name": "订单基础信息列表查询接口（根据成交时间）",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.basic.list.get",
+            "updated_at": 1594728075000
+        },
+        "pdd.order.information.get": {
+            "name": "订单详情",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.information.get",
+            "updated_at": 1780197091000
+        },
+        "pdd.order.list.get": {
+            "name": "订单列表查询接口（根据成交时间）",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.list.get",
+            "updated_at": 1780197091000
+        },
+        "pdd.order.merge.ship.order.group": {
+            "name": "合并发货订单分组",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.merge.ship.order.group",
+            "updated_at": 1705823292000
+        },
+        "pdd.order.note.update": {
+            "name": "编辑商家订单备注",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.note.update",
+            "updated_at": 1618326279000
+        },
+        "pdd.order.number.list.increment.get": {
+            "name": "订单增量接口",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.number.list.increment.get",
+            "updated_at": 1780197091000
+        },
+        "pdd.order.promise.info.get": {
+            "name": "查询订单承诺信息",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.promise.info.get",
+            "updated_at": 1603787267000
+        },
+        "pdd.order.promotion.get": {
+            "name": "获取订单优惠明细数据",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.promotion.get",
+            "updated_at": 1721618591000
+        },
+        "pdd.order.review.info": {
+            "name": "订单审核信息查询接口",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.review.info",
+            "updated_at": 1741943325000
+        },
+        "pdd.order.search.order": {
+            "name": "订单检索接口",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.search.order",
+            "updated_at": 1780563127000
+        },
+        "pdd.order.service.benefit.update": {
+            "name": "服务权益单更新接口",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.service.benefit.update",
+            "updated_at": 1732072507000
+        },
+        "pdd.order.specific.order.information.get": {
+            "name": "特定类型订单查询接口",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.specific.order.information.get",
+            "updated_at": 1776778930000
+        },
+        "pdd.order.status.get": {
+            "name": "订单状态",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.status.get",
+            "updated_at": 1624864141000
+        },
+        "pdd.order.submall.information.get": {
+            "name": "以旧换新国补订单详情分店铺查询接口",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.submall.information.get",
+            "updated_at": 1776778970000
+        },
+        "pdd.order.submall.list.get": {
+            "name": "以旧换新国补订单列表分店铺查询接口（根据成交时间）",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.submall.list.get",
+            "updated_at": 1776778977000
+        },
+        "pdd.order.tradein.info": {
+            "name": "订单政府补贴信息查询接口",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.tradein.info",
+            "updated_at": 1785400565000
+        },
+        "pdd.order.tradein.post.sn": {
+            "name": "上传国补订单的sn码",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.tradein.post.sn",
+            "updated_at": 1748424487000
+        },
+        "pdd.order.update.address": {
+            "name": "修改订单收件地址接口",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.update.address",
+            "updated_at": 1783581962000
+        },
+        "pdd.order.upload.delivery.feature": {
+            "name": "订单发货内容信息上传",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.upload.delivery.feature",
+            "updated_at": 1754375299000
+        },
+        "pdd.order.upload.extra.logistics": {
+            "name": "订单额外运单信息上传",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.upload.extra.logistics",
+            "updated_at": 1648016971000
+        },
+        "pdd.order.upload.relation.logistics": {
+            "name": "订单关联运单信息上传",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.upload.relation.logistics",
+            "updated_at": 1639481859000
+        },
+        "pdd.order.virtual.information.get": {
+            "name": "虚拟业务信息查询接口",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.order.virtual.information.get",
+            "updated_at": 1761639682000
+        },
+        "pdd.oversea.clearance.get": {
+            "name": "获取多多国际清关材料",
+            "category_id": 48,
+            "category_name": "多多国际API",
+            "namespace": "International",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.oversea.clearance.get",
+            "updated_at": 1747558023000
+        },
+        "pdd.oversea.declaration.fail.notify": {
+            "name": "同步海淘订单申报失败情况",
+            "category_id": 48,
+            "category_name": "多多国际API",
+            "namespace": "International",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.oversea.declaration.fail.notify",
+            "updated_at": 1762351563000
+        },
+        "pdd.pmc.accrue.query": {
+            "name": "消息队列积压数量查询",
+            "category_id": 22,
+            "category_name": "消息服务API",
+            "namespace": "Message",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.pmc.accrue.query",
+            "updated_at": 1603199561000
+        },
+        "pdd.pmc.user.cancel": {
+            "name": "取消用户的消息服务",
+            "category_id": 22,
+            "category_name": "消息服务API",
+            "namespace": "Message",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.pmc.user.cancel",
+            "updated_at": 1618239286000
+        },
+        "pdd.pmc.user.get": {
+            "name": "获取用户已开通消息",
+            "category_id": 22,
+            "category_name": "消息服务API",
+            "namespace": "Message",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.pmc.user.get",
+            "updated_at": 1618239286000
+        },
+        "pdd.pmc.user.permit": {
+            "name": "为已授权的用户开通消息服务",
+            "category_id": 22,
+            "category_name": "消息服务API",
+            "namespace": "Message",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.pmc.user.permit",
+            "updated_at": 1618239286000
+        },
+        "pdd.pop.auth.token.create": {
+            "name": "获取Access Token",
+            "category_id": 20,
+            "category_name": "工具API",
+            "namespace": "Tools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.pop.auth.token.create",
+            "updated_at": 1592752846000
+        },
+        "pdd.pop.mall.bind.relation.report": {
+            "name": "店铺关联关系上报",
+            "category_id": 20,
+            "category_name": "工具API",
+            "namespace": "Tools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.pop.mall.bind.relation.report",
+            "updated_at": 1658146175000
+        },
+        "pdd.pop.mall.bind.ticket.get": {
+            "name": "获取店铺关联ticket",
+            "category_id": 20,
+            "category_name": "工具API",
+            "namespace": "Tools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.pop.mall.bind.ticket.get",
+            "updated_at": 1657184486000
+        },
+        "pdd.pop.mall.bind.token.get": {
+            "name": "获取被关联店铺Access Token",
+            "category_id": 20,
+            "category_name": "工具API",
+            "namespace": "Tools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.pop.mall.bind.token.get",
+            "updated_at": 1657184486000
+        },
+        "pdd.promotion.goods.coupon.list.get": {
+            "name": "商品优惠券批次列表查询",
+            "category_id": 15,
+            "category_name": "营销API",
+            "namespace": "Marketing",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.promotion.goods.coupon.list.get",
+            "updated_at": 1541143955000
+        },
+        "pdd.promotion.limited.activity.cancel": {
+            "name": "限时限量购活动结束接口",
+            "category_id": 15,
+            "category_name": "营销API",
+            "namespace": "Marketing",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.promotion.limited.activity.cancel",
+            "updated_at": 1600343730000
+        },
+        "pdd.promotion.limited.activity.create": {
+            "name": "限时限量购活动创建接口",
+            "category_id": 15,
+            "category_name": "营销API",
+            "namespace": "Marketing",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.promotion.limited.activity.create",
+            "updated_at": 1600343730000
+        },
+        "pdd.promotion.limited.discount.list.get": {
+            "name": "限时限量购活动列表查询",
+            "category_id": 15,
+            "category_name": "营销API",
+            "namespace": "Marketing",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.promotion.limited.discount.list.get",
+            "updated_at": 1600343730000
+        },
+        "pdd.promotion.limited.qualified.goods.get": {
+            "name": "限时限量购可选商品查询接口",
+            "category_id": 15,
+            "category_name": "营销API",
+            "namespace": "Marketing",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.promotion.limited.qualified.goods.get",
+            "updated_at": 1600343730000
+        },
+        "pdd.promotion.limited.qualified.sku.get": {
+            "name": "限时限量购可选sku查询接口",
+            "category_id": 15,
+            "category_name": "营销API",
+            "namespace": "Marketing",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.promotion.limited.qualified.sku.get",
+            "updated_at": 1600343730000
+        },
+        "pdd.promotion.merchant.coupon.list.get": {
+            "name": "店铺优惠券批次列表接口",
+            "category_id": 15,
+            "category_name": "营销API",
+            "namespace": "Marketing",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.promotion.merchant.coupon.list.get",
+            "updated_at": 1541063696000
+        },
+        "pdd.qrpay.payee.register": {
+            "name": "交易二维码-参数注册接口",
+            "category_id": 46,
+            "category_name": "门店API",
+            "namespace": "Store",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.qrpay.payee.register",
+            "updated_at": 1571844591000
+        },
+        "pdd.rdc.pddgenius.sendgoods.cancel": {
+            "name": "取消发货",
+            "category_id": 2,
+            "category_name": "售后API",
+            "namespace": "AfterSales",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.rdc.pddgenius.sendgoods.cancel",
+            "updated_at": 1618239286000
+        },
+        "pdd.refund.address.list.get": {
+            "name": "获取商家退货地址库",
+            "category_id": 2,
+            "category_name": "售后API",
+            "namespace": "AfterSales",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.refund.address.list.get",
+            "updated_at": 1618326294000
+        },
+        "pdd.refund.agree": {
+            "name": "同意退款",
+            "category_id": 2,
+            "category_name": "售后API",
+            "namespace": "AfterSales",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.refund.agree",
+            "updated_at": 1612709320000
+        },
+        "pdd.refund.exchange.shipping": {
+            "name": "商家换货发货",
+            "category_id": 2,
+            "category_name": "售后API",
+            "namespace": "AfterSales",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.refund.exchange.shipping",
+            "updated_at": 1621762791000
+        },
+        "pdd.refund.images.get": {
+            "name": "用户申请售后时提交的图片凭证",
+            "category_id": 2,
+            "category_name": "售后API",
+            "namespace": "AfterSales",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.refund.images.get",
+            "updated_at": 1760960823000
+        },
+        "pdd.refund.information.get": {
+            "name": "售后单详情接口",
+            "category_id": 2,
+            "category_name": "售后API",
+            "namespace": "AfterSales",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.refund.information.get",
+            "updated_at": 1776677077000
+        },
+        "pdd.refund.list.increment.get": {
+            "name": "售后列表接口",
+            "category_id": 2,
+            "category_name": "售后API",
+            "namespace": "AfterSales",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.refund.list.increment.get",
+            "updated_at": 1697960790000
+        },
+        "pdd.refund.returngoods.agree": {
+            "name": "商家售后同意退货",
+            "category_id": 2,
+            "category_name": "售后API",
+            "namespace": "AfterSales",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.refund.returngoods.agree",
+            "updated_at": 1614517458000
+        },
+        "pdd.refund.status.check": {
+            "name": "售后校验接口",
+            "category_id": 2,
+            "category_name": "售后API",
+            "namespace": "AfterSales",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.refund.status.check",
+            "updated_at": 1541573481000
+        },
+        "pdd.reserved.medicine.logistics.upload": {
+            "name": "预留药物流信息上传",
+            "category_id": 16,
+            "category_name": "卡券API",
+            "namespace": "Voucher",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.reserved.medicine.logistics.upload",
+            "updated_at": 1785313325000
+        },
+        "pdd.service.aftersales.appoint.notify": {
+            "name": "售后服务预约通知接口",
+            "category_id": 49,
+            "category_name": "旅游门票API",
+            "namespace": "Travel",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.service.aftersales.appoint.notify",
+            "updated_at": 1779689249000
+        },
+        "pdd.servicemarket.contract.search": {
+            "name": "服务市场订单履约查询",
+            "category_id": 30,
+            "category_name": "服务市场API",
+            "namespace": "ServiceMarket",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.servicemarket.contract.search",
+            "updated_at": 1605786135000
+        },
+        "pdd.servicemarket.settlementbill.get": {
+            "name": "月结算账单导出",
+            "category_id": 30,
+            "category_name": "服务市场API",
+            "namespace": "ServiceMarket",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.servicemarket.settlementbill.get",
+            "updated_at": 1604989484000
+        },
+        "pdd.servicemarket.tradelist.get": {
+            "name": "交易明细单导出",
+            "category_id": 30,
+            "category_name": "服务市场API",
+            "namespace": "ServiceMarket",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.servicemarket.tradelist.get",
+            "updated_at": 1769322260000
+        },
+        "pdd.sim.auth.id.sync": {
+            "name": "号卡直连同步认证Id",
+            "category_id": 4,
+            "category_name": "虚拟类目API",
+            "namespace": "Virtual",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.sim.auth.id.sync",
+            "updated_at": 1779679186000
+        },
+        "pdd.sim.direct.order.push": {
+            "name": "号卡直连订单推送",
+            "category_id": 4,
+            "category_name": "虚拟类目API",
+            "namespace": "Virtual",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.sim.direct.order.push",
+            "updated_at": 1779679186000
+        },
+        "pdd.sim.process.result.notify": {
+            "name": "号卡直连处理结果异步通知",
+            "category_id": 4,
+            "category_name": "虚拟类目API",
+            "namespace": "Virtual",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.sim.process.result.notify",
+            "updated_at": 1779679186000
+        },
+        "pdd.sim.serial.no.validate": {
+            "name": "验证号卡流水号",
+            "category_id": 4,
+            "category_name": "虚拟类目API",
+            "namespace": "Virtual",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.sim.serial.no.validate",
+            "updated_at": 1779679186000
+        },
+        "pdd.sms.detailbill.push": {
+            "name": "短信明细回执",
+            "category_id": 32,
+            "category_name": "短信供应商API",
+            "namespace": "SmsProvider",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.sms.detailbill.push",
+            "updated_at": 1621346453000
+        },
+        "pdd.stock.goods.id.to.sku.query": {
+            "name": "根据商品id查询sku信息",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.stock.goods.id.to.sku.query",
+            "updated_at": 1698203362000
+        },
+        "pdd.stock.ware.create": {
+            "name": "创建货品",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.stock.ware.create",
+            "updated_at": 1540382904000
+        },
+        "pdd.stock.ware.delete": {
+            "name": "删除货品",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.stock.ware.delete",
+            "updated_at": 1698203391000
+        },
+        "pdd.stock.ware.detail.query": {
+            "name": "查询货品详情",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.stock.ware.detail.query",
+            "updated_at": 1698203319000
+        },
+        "pdd.stock.ware.info.list": {
+            "name": "货品列表的查询接口",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.stock.ware.info.list",
+            "updated_at": 1561710799000
+        },
+        "pdd.stock.ware.list": {
+            "name": "查询货品列表",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.stock.ware.list",
+            "updated_at": 1541573952000
+        },
+        "pdd.stock.ware.move": {
+            "name": "家电分仓库存-库存信息调整",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.stock.ware.move",
+            "updated_at": 1540302563000
+        },
+        "pdd.stock.ware.sku.update": {
+            "name": "货品关联sku",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.stock.ware.sku.update",
+            "updated_at": 1540301280000
+        },
+        "pdd.stock.ware.update": {
+            "name": "编辑货品",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.stock.ware.update",
+            "updated_at": 1540301199000
+        },
+        "pdd.stock.ware.warehouse.query": {
+            "name": "货品仓库库存信息查询",
+            "category_id": 21,
+            "category_name": "仓储API",
+            "namespace": "Warehouse",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.stock.ware.warehouse.query",
+            "updated_at": 1698118422000
+        },
+        "pdd.survey.query.special.survey": {
+            "name": "根据订单号查询调查问卷和答案",
+            "category_id": 1,
+            "category_name": "订单API",
+            "namespace": "Order",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.survey.query.special.survey",
+            "updated_at": 1753365051000
+        },
+        "pdd.tail.express.sync.jt": {
+            "name": "物流信息同步",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.tail.express.sync.jt",
+            "updated_at": 1783057491000
+        },
+        "pdd.tail.rural.express.trace.sync": {
+            "name": "末端进村物流轨迹同步",
+            "category_id": 3,
+            "category_name": "物流API",
+            "namespace": "Logistics",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.tail.rural.express.trace.sync",
+            "updated_at": 1785036077000
+        },
+        "pdd.ticket.areacode.get": {
+            "name": "旅游门票区域编码查询",
+            "category_id": 49,
+            "category_name": "旅游门票API",
+            "namespace": "Travel",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ticket.areacode.get",
+            "updated_at": 1596448916000
+        },
+        "pdd.ticket.goods.query": {
+            "name": "门票商品查询接口",
+            "category_id": 49,
+            "category_name": "旅游门票API",
+            "namespace": "Travel",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ticket.goods.query",
+            "updated_at": 1635948397000
+        },
+        "pdd.ticket.goods.upload": {
+            "name": "门票商品新建及更新接口",
+            "category_id": 49,
+            "category_name": "旅游门票API",
+            "namespace": "Travel",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ticket.goods.upload",
+            "updated_at": 1634278220000
+        },
+        "pdd.ticket.order.create.notifycation": {
+            "name": "旅游门票订单创建异步回调接口",
+            "category_id": 49,
+            "category_name": "旅游门票API",
+            "namespace": "Travel",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ticket.order.create.notifycation",
+            "updated_at": 1597236473000
+        },
+        "pdd.ticket.order.refund.notifycation": {
+            "name": "旅游门票订单售后结果回调",
+            "category_id": 49,
+            "category_name": "旅游门票API",
+            "namespace": "Travel",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ticket.order.refund.notifycation",
+            "updated_at": 1597237738000
+        },
+        "pdd.ticket.scenic.get": {
+            "name": "旅游门票拼多多景区编码查询",
+            "category_id": 49,
+            "category_name": "旅游门票API",
+            "namespace": "Travel",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ticket.scenic.get",
+            "updated_at": 1614928449000
+        },
+        "pdd.ticket.sku.rule.add": {
+            "name": "旅游门票商品履约规则新增",
+            "category_id": 49,
+            "category_name": "旅游门票API",
+            "namespace": "Travel",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ticket.sku.rule.add",
+            "updated_at": 1596448916000
+        },
+        "pdd.ticket.sku.rule.edit": {
+            "name": "旅游门票商品履约规则修改",
+            "category_id": 49,
+            "category_name": "旅游门票API",
+            "namespace": "Travel",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ticket.sku.rule.edit",
+            "updated_at": 1596448916000
+        },
+        "pdd.ticket.sku.rule.get": {
+            "name": "旅游门票商品履约生效规则查询",
+            "category_id": 49,
+            "category_name": "旅游门票API",
+            "namespace": "Travel",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ticket.sku.rule.get",
+            "updated_at": 1596448916000
+        },
+        "pdd.ticket.verification.notifycation": {
+            "name": "旅游门票订单核销通知接口",
+            "category_id": 49,
+            "category_name": "旅游门票API",
+            "namespace": "Travel",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.ticket.verification.notifycation",
+            "updated_at": 1596448916000
+        },
+        "pdd.time.get": {
+            "name": "获取拼多多系统时间",
+            "category_id": 20,
+            "category_name": "工具API",
+            "namespace": "Tools",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.time.get",
+            "updated_at": 1634203521000
+        },
+        "pdd.trace.source.query.goods.info": {
+            "name": "根据溯源码ID获取溯源商品信息",
+            "category_id": 18,
+            "category_name": "店铺API",
+            "namespace": "Shop",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.trace.source.query.goods.info",
+            "updated_at": 1615369029000
+        },
+        "pdd.trace.source.upload.code.info": {
+            "name": "溯源服务商上传溯源码信息",
+            "category_id": 18,
+            "category_name": "店铺API",
+            "namespace": "Shop",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.trace.source.upload.code.info",
+            "updated_at": 1615369029000
+        },
+        "pdd.trace.source.upload.plan.info": {
+            "name": "溯源服务商上传正品溯源粘贴计划",
+            "category_id": 18,
+            "category_name": "店铺API",
+            "namespace": "Shop",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.trace.source.upload.plan.info",
+            "updated_at": 1615369029000
+        },
+        "pdd.vas.order.search": {
+            "name": "线上服务市场订单查询接口",
+            "category_id": 30,
+            "category_name": "服务市场API",
+            "namespace": "ServiceMarket",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.vas.order.search",
+            "updated_at": 1617591665000
+        },
+        "pdd.virtual.game.server.query": {
+            "name": "虚拟游戏类区服列表接口",
+            "category_id": 4,
+            "category_name": "虚拟类目API",
+            "namespace": "Virtual",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.virtual.game.server.query",
+            "updated_at": 1618239286000
+        },
+        "pdd.virtual.mobile.charge.notify": {
+            "name": "虚拟类目发货通知接口",
+            "category_id": 4,
+            "category_name": "虚拟类目API",
+            "namespace": "Virtual",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.virtual.mobile.charge.notify",
+            "updated_at": 1648004977000
+        },
+        "pdd.vivodeskwindow.queryresources": {
+            "name": "vivo视界资源下发",
+            "category_id": 62,
+            "category_name": "视频推荐API",
+            "namespace": "VideoRecommendation",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.vivodeskwindow.queryresources",
+            "updated_at": 1742131728000
+        },
+        "pdd.voucher.appointment.info.send": {
+            "name": "卡券预约提货接口",
+            "category_id": 16,
+            "category_name": "卡券API",
+            "namespace": "Voucher",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.voucher.appointment.info.send",
+            "updated_at": 1540314804000
+        },
+        "pdd.voucher.ota.card.prepare.verification": {
+            "name": "平台卡密核销验券",
+            "category_id": 16,
+            "category_name": "卡券API",
+            "namespace": "Voucher",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.voucher.ota.card.prepare.verification",
+            "updated_at": 1612074532000
+        },
+        "pdd.voucher.ota.card.verification": {
+            "name": "卡券（电子）核销接口（平台生成卡密）",
+            "category_id": 16,
+            "category_name": "卡券API",
+            "namespace": "Voucher",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.voucher.ota.card.verification",
+            "updated_at": 1610950765000
+        },
+        "pdd.voucher.physical.goods.send": {
+            "name": "卡券发货（实物）接口",
+            "category_id": 16,
+            "category_name": "卡券API",
+            "namespace": "Voucher",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.voucher.physical.goods.send",
+            "updated_at": 1541573232000
+        },
+        "pdd.voucher.realtime.verify.sync": {
+            "name": "卡券API核销券码",
+            "category_id": 16,
+            "category_name": "卡券API",
+            "namespace": "Voucher",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.voucher.realtime.verify.sync",
+            "updated_at": 1612095727000
+        },
+        "pdd.voucher.virtual.card.batch.add": {
+            "name": "批量添加卡券",
+            "category_id": 16,
+            "category_name": "卡券API",
+            "namespace": "Voucher",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.voucher.virtual.card.batch.add",
+            "updated_at": 1608034497000
+        },
+        "pdd.voucher.virtual.card.verification": {
+            "name": "卡券（电子）核销接口",
+            "category_id": 16,
+            "category_name": "卡券API",
+            "namespace": "Voucher",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.voucher.virtual.card.verification",
+            "updated_at": 1540885089000
+        },
+        "pdd.voucher.voucher.complain": {
+            "name": "卡券投诉接口",
+            "category_id": 16,
+            "category_name": "卡券API",
+            "namespace": "Voucher",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.voucher.voucher.complain",
+            "updated_at": 1541572919000
+        },
+        "pdd.voucher.voucher.info.send": {
+            "name": "卡券信息发送接口",
+            "category_id": 16,
+            "category_name": "卡券API",
+            "namespace": "Voucher",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.voucher.voucher.info.send",
+            "updated_at": 1541573851000
+        },
+        "pdd.warranty.orders.increment.get": {
+            "name": "查询服务保障订单",
+            "category_id": 4,
+            "category_name": "虚拟类目API",
+            "namespace": "Virtual",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.warranty.orders.increment.get",
+            "updated_at": 1779197492000
+        },
+        "pdd.waybill.cancel": {
+            "name": "商家取消获取的电子面单号",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.waybill.cancel",
+            "updated_at": 1618239286000
+        },
+        "pdd.waybill.get": {
+            "name": "电子面单云打印接口",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.waybill.get",
+            "updated_at": 1732502563000
+        },
+        "pdd.waybill.query.by.waybillcode": {
+            "name": "通过面单号查询面单信息",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.waybill.query.by.waybillcode",
+            "updated_at": 1659364682000
+        },
+        "pdd.waybill.search": {
+            "name": "查询面单服务订购及面单使用情况",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.waybill.search",
+            "updated_at": 1603201981000
+        },
+        "pdd.waybill.update": {
+            "name": "电子面单云打印更新接口",
+            "category_id": 23,
+            "category_name": "电子面单API",
+            "namespace": "ElectronicWaybill",
+            "document_url": "https://open.pinduoduo.com/application/document/api?id=pdd.waybill.update",
+            "updated_at": 1623310533000
+        }
+    }
+}
