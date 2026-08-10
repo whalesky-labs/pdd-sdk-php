@@ -1,0 +1,11 @@
+{
+    "source": "https://open.pinduoduo.com/application/document/api",
+    "apis": {
+        "pdd.erp.order.sync": [
+            "order_sn",
+            "order_state",
+            "waybill_no",
+            "logistics_id"
+        ]
+    }
+}

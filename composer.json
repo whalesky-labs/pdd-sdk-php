@@ -41,11 +41,20 @@
         }
     },
     "scripts": {
-        "generate:api-client": "php scripts/generate-api-client-methods.php",
-        "generate:api-client-check": "php scripts/generate-api-client-methods.php --check",
+        "generate:api": [
+            "php scripts/generate-api-classes.php",
+            "php scripts/generate-api-client-methods.php"
+        ],
+        "generate:api-check": [
+            "php scripts/generate-api-classes.php --check",
+            "php scripts/generate-api-client-methods.php --check"
+        ],
+        "generate:api-client": "@generate:api",
+        "generate:api-client-check": "@generate:api-check",
         "cs-fix": "php-cs-fixer fix --config=.php-cs-fixer.php",
         "cs-check": "php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff",
-        "test": "phpunit"
+        "test": "phpunit",
+        "test-integration": "phpunit --configuration phpunit.integration.xml.dist"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,

@@ -1,14 +1,21 @@
-name: Tests
+name: CI
 
 on:
   push:
+    branches:
+      - main
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  tests:
+  test:
     name: PHP ${{ matrix.php }}
     runs-on: ubuntu-latest
     strategy:
@@ -17,31 +24,47 @@ jobs:
         php: ['8.1', '8.2', '8.3', '8.4']
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: shivammathur/setup-php@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
+          extensions: json
           coverage: none
           tools: composer:v2
 
-      - run: composer install --no-interaction --prefer-dist
-      - run: composer validate --strict
-      - run: composer generate:api-client-check
-      - run: composer test
+      - name: Validate Composer metadata
+        run: composer validate --strict
+
+      - name: Install dependencies
+        uses: ramsey/composer-install@v3
+
+      - name: Verify generated API surface
+        run: composer generate:api-check
+
+      - name: Run offline tests
+        run: composer test
 
   coding-style:
     name: Coding style
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: shivammathur/setup-php@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
+          extensions: json
           coverage: none
           tools: composer:v2
 
-      - run: composer install --no-interaction --prefer-dist
-      - run: composer cs-check
+      - name: Install dependencies
+        uses: ramsey/composer-install@v3
+
+      - name: Check coding style
+        run: composer cs-check

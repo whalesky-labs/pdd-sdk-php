@@ -37,6 +37,7 @@ sort($apiFiles, SORT_STRING);
 
 $methods = [];
 $imports = [];
+$coveredTypes = [];
 foreach ($apiFiles as $apiFile) {
     $relativePath = substr($apiFile, strlen($root . '/src/'));
     $className = 'PddSdk\\' . str_replace(['/', '.php'], ['\\', ''], $relativePath);
@@ -50,6 +51,10 @@ foreach ($apiFiles as $apiFile) {
     if (!is_array($catalogApi)) {
         fail(sprintf('%s is not present in the official API catalog.', $metadata->type));
     }
+    if (isset($coveredTypes[$metadata->type])) {
+        fail(sprintf('Official API type %s is implemented more than once.', $metadata->type));
+    }
+    $coveredTypes[$metadata->type] = true;
 
     $expectedNamespace = (string) ($catalogApi['namespace'] ?? '');
     $actualNamespace = substr($className, 0, strrpos($className, '\\'));
@@ -86,7 +91,28 @@ foreach ($apiFiles as $apiFile) {
     $imports[$shortName] = $className;
 }
 
-ksort($imports, SORT_STRING);
+$missingTypes = array_diff(array_keys($catalogApis), array_keys($coveredTypes));
+if ($missingTypes !== []) {
+    sort($missingTypes, SORT_STRING);
+    fail(sprintf('Official API type(s) have no request class: %s.', implode(', ', $missingTypes)));
+}
+
+uasort($imports, static function (string $left, string $right): int {
+    $leftSegments = explode('\\', $left);
+    $rightSegments = explode('\\', $right);
+    foreach ($leftSegments as $index => $leftSegment) {
+        if (!isset($rightSegments[$index])) {
+            return 1;
+        }
+
+        $comparison = strnatcasecmp($leftSegment, $rightSegments[$index]);
+        if ($comparison !== 0) {
+            return $comparison;
+        }
+    }
+
+    return count($leftSegments) <=> count($rightSegments);
+});
 ksort($methods, SORT_STRING);
 
 $lines = [

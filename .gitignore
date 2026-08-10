@@ -1,4 +1,6 @@
 /.env
+/.env.*
+!/.env.example
 /.php-cs-fixer.cache
 /.phpunit.cache/
 /test-report.html
