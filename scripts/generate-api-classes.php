@@ -1,7 +1,14 @@
 <?php
 
 declare(strict_types=1);
-
+/**
+ * This file is part of Pinduoduo Open Platform SDK for PHP.
+ *
+ * @link     https://github.com/whalesky-labs/pdd-sdk-php
+ * @document https://github.com/whalesky-labs/pdd-sdk-php
+ * @contact  westng
+ * @license  https://github.com/whalesky-labs/pdd-sdk-php#license
+ */
 $root = dirname(__DIR__);
 $checkOnly = in_array('--check', $argv, true);
 $catalog = readJson($root . '/resources/official-api-catalog.json');
@@ -177,6 +184,14 @@ function renderApiClass(
         '<?php',
         '',
         'declare(strict_types=1);',
+        '/**',
+        ' * This file is part of Pinduoduo Open Platform SDK for PHP.',
+        ' *',
+        ' * @link     https://github.com/whalesky-labs/pdd-sdk-php',
+        ' * @document https://github.com/whalesky-labs/pdd-sdk-php',
+        ' * @contact  westng',
+        ' * @license  https://github.com/whalesky-labs/pdd-sdk-php#license',
+        ' */',
         '',
         sprintf('namespace PddSdk\\Api\\%s;', $namespace),
         '',
