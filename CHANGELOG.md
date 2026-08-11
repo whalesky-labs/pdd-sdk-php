@@ -14,3 +14,6 @@
 - 变更前：测试套件只能离线运行，无法核验真实平台交互；变更后：提供独立的只读真实接口测试，输出脱敏原始请求与平台原始响应，且不会被默认测试或公共 CI 执行。
 - 变更前：CI 在所有分支推送时重复安装依赖；变更后：按主分支、拉取请求和手动触发运行 PHP 8.1 至 8.4 矩阵，并缓存 Composer 依赖、取消同分支过期任务。
 - 变更前：PHP CS Fixer 只检查基础格式，项目文件缺少统一归属说明；变更后：所有维护代码和生成代码统一添加项目、文档、联系人及 License 文件头，重新生成接口时也会保留。
+- 变更前：CI 只能验证代码，无法生成 Packagist 可识别的稳定版本；变更后：维护者可通过手动 Release 工作流自动计算或指定语义化版本，完整验证后创建 Git Tag 与 GitHub Release，并由 Packagist Hook 自动同步。
+
+[Unreleased]: https://github.com/whalesky-labs/pdd-sdk-php/commits/main

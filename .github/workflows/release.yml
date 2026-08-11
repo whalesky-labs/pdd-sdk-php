@@ -1,0 +1,241 @@
+name: Release
+run-name: >-
+  Release ${{ inputs.mode == 'manual' && inputs.version || 'auto' }}
+  from ${{ inputs.source_branch }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 版本模式
+        required: true
+        default: auto
+        type: choice
+        options:
+          - auto
+          - manual
+      version:
+        description: 手动指定版本号，例如 1.0.0
+        required: false
+        type: string
+      publish_release:
+        description: 是否创建并发布 GitHub Release
+        required: true
+        default: true
+        type: boolean
+      source_branch:
+        description: 发布来源分支
+        required: true
+        default: main
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ inputs.source_branch }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Validate and release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate source branch input
+        shell: bash
+        env:
+          SOURCE_BRANCH: ${{ inputs.source_branch }}
+        run: |
+          set -euo pipefail
+
+          if ! git check-ref-format --branch "$SOURCE_BRANCH" >/dev/null; then
+            echo "Invalid source branch: $SOURCE_BRANCH" >&2
+            exit 1
+          fi
+
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+        with:
+          ref: refs/heads/${{ inputs.source_branch }}
+          fetch-depth: 0
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: curl, json, openssl
+          coverage: none
+          tools: composer:v2
+
+      - name: Resolve version
+        id: version
+        shell: bash
+        env:
+          MODE: ${{ inputs.mode }}
+          INPUT_VERSION: ${{ inputs.version }}
+          SOURCE_BRANCH: ${{ inputs.source_branch }}
+        run: |
+          set -euo pipefail
+
+          normalize_version() {
+            local value="$1"
+            value="${value#v}"
+            printf '%s' "$value"
+          }
+
+          validate_version() {
+            [[ "$1" =~ ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]
+          }
+
+          git fetch --force --tags origin
+          latest_tag="$(git tag --merged HEAD --list 'v[0-9]*.[0-9]*.[0-9]*' --sort=-version:refname | head -n 1 || true)"
+
+          if [[ "$MODE" == "manual" ]]; then
+            if [[ -z "$INPUT_VERSION" ]]; then
+              echo 'Manual mode requires a version.' >&2
+              exit 1
+            fi
+
+            version="$(normalize_version "$INPUT_VERSION")"
+          else
+            if [[ -z "$latest_tag" ]]; then
+              version='1.0.0'
+            else
+              latest_version="$(normalize_version "$latest_tag")"
+              if ! validate_version "$latest_version"; then
+                echo "Latest tag is not a supported semantic version: $latest_tag" >&2
+                exit 1
+              fi
+
+              IFS='.' read -r major minor patch <<< "$latest_version"
+              version="${major}.${minor}.$((patch + 1))"
+            fi
+          fi
+
+          if ! validate_version "$version"; then
+            echo "Invalid version: $version. Expected X.Y.Z." >&2
+            exit 1
+          fi
+
+          tag="v${version}"
+          if git rev-parse -q --verify "refs/tags/${tag}" >/dev/null; then
+            echo "Tag already exists: $tag" >&2
+            exit 1
+          fi
+
+          if git rev-parse -q --verify "refs/tags/${version}" >/dev/null; then
+            echo "Equivalent tag already exists: $version" >&2
+            exit 1
+          fi
+
+          if [[ -n "$latest_tag" ]] && [[ "$(git rev-list --count "${latest_tag}..HEAD")" -eq 0 ]]; then
+            echo "No new commits since $latest_tag." >&2
+            exit 1
+          fi
+
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "latest_tag=$latest_tag" >> "$GITHUB_OUTPUT"
+          echo "source_branch=$SOURCE_BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Validate release metadata
+        shell: bash
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          test -f CHANGELOG.md
+          grep -Fq '## [Unreleased]' CHANGELOG.md
+          grep -Fq '[Unreleased]:' CHANGELOG.md
+          test -n "$VERSION"
+          composer validate --strict
+
+      - name: Build release notes from Changelog
+        id: notes
+        shell: bash
+        run: |
+          set -euo pipefail
+          notes_file="$RUNNER_TEMP/release-notes.md"
+
+          awk '
+            $0 == "## [Unreleased]" {
+              capture = 1
+              next
+            }
+            capture && (/^## \[/ || /^\[Unreleased\]:/) { exit }
+            capture { print }
+          ' CHANGELOG.md > "$notes_file"
+
+          if [[ ! -s "$notes_file" ]] || ! grep -q '[^[:space:]]' "$notes_file"; then
+            echo 'Changelog Unreleased section is empty.' >&2
+            exit 1
+          fi
+
+          echo "path=$notes_file" >> "$GITHUB_OUTPUT"
+
+      - name: Install dependencies
+        uses: ramsey/composer-install@v3
+        with:
+          dependency-versions: highest
+
+      - name: Verify generated API surface
+        run: composer generate:api-check
+
+      - name: Run offline tests
+        run: composer test
+
+      - name: Check coding style
+        env:
+          PHP_CS_FIXER_IGNORE_ENV: '1'
+        run: composer cs-check
+
+      - name: Check dependency security advisories
+        run: composer audit
+
+      - name: Show release plan
+        shell: bash
+        env:
+          MODE: ${{ inputs.mode }}
+          VERSION: ${{ steps.version.outputs.version }}
+          TAG: ${{ steps.version.outputs.tag }}
+          LATEST_TAG: ${{ steps.version.outputs.latest_tag }}
+          SOURCE_BRANCH: ${{ steps.version.outputs.source_branch }}
+          PUBLISH_RELEASE: ${{ inputs.publish_release }}
+        run: |
+          {
+            echo '## Release plan'
+            echo
+            echo "- Mode: \`$MODE\`"
+            echo "- Version: \`$VERSION\`"
+            echo "- Tag: \`$TAG\`"
+            echo "- Previous tag: \`${LATEST_TAG:-none}\`"
+            echo "- Source branch: \`$SOURCE_BRANCH\`"
+            echo "- Publish GitHub Release: \`$PUBLISH_RELEASE\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create and push tag
+        if: ${{ inputs.publish_release }}
+        shell: bash
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag --annotate "$TAG" --message "Release $TAG"
+          git push origin "$TAG"
+
+      - name: Create GitHub Release
+        if: ${{ inputs.publish_release }}
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          target_commitish: ${{ steps.version.outputs.source_branch }}
+          name: ${{ steps.version.outputs.tag }}
+          body_path: ${{ steps.notes.outputs.path }}
+          make_latest: true
+
+      - name: Finish validation-only run
+        if: ${{ !inputs.publish_release }}
+        run: echo 'Validation completed. No tag or GitHub Release was created.'

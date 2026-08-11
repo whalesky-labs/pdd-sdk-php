@@ -405,7 +405,9 @@ tests/                      # 离线单元测试和真实接口测试
 
 稳定版本计划遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。新增能力、行为变化、兼容性说明和修复记录在 [`CHANGELOG.md`](CHANGELOG.md)；尚未发布的内容保留在 `Unreleased` 章节。
 
-当前仓库尚无正式 Tag、GitHub Release 或 Packagist 稳定版本。提交和推送代码不等于发布版本；Tag、Release 和 Packagist 发布应在单独审核后执行。
+稳定版本以 GitHub Tag 与 Release 为准，并由 Packagist 自动同步。提交和推送代码不等于发布版本；Tag、Release 和 Packagist 发布应在单独审核后执行。
+
+维护者可在 GitHub Actions 中手动运行 [`Release`](.github/workflows/release.yml)：自动模式在首发时使用 `v1.0.0`，后续默认递增补丁版本；手动模式可指定 `X.Y.Z`。关闭“创建并发布 GitHub Release”时只执行版本解析、元数据检查、生成一致性检查、测试、代码风格和依赖安全审计，不创建 Tag 或 Release。发布说明直接取自 `CHANGELOG.md` 的 `Unreleased` 章节，正式发布后由 Packagist GitHub Hook 自动同步稳定版本。
 
 ## CI
 
@@ -417,6 +419,8 @@ tests/                      # 离线单元测试和真实接口测试
 - 完全离线的 PHPUnit 测试；
 - 独立的 PHP CS Fixer 代码风格检查；
 - 同分支旧任务自动取消，Composer 依赖自动缓存。
+
+[`Release`](.github/workflows/release.yml) 仅支持手动触发，发布前重复执行 Composer 校验、生成结果检查、离线测试、代码风格和依赖安全审计。只有明确开启发布选项时才会创建语义化版本 Tag 与 GitHub Release。
 
 真实接口测试不会进入公共 CI，因为它依赖私有应用凭证、接口权限、有效 Token 和外部网关状态。
 
