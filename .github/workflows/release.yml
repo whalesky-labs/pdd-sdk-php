@@ -63,8 +63,8 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.1'
-          extensions: curl, json, openssl
+          php-version: '8.3'
+          extensions: curl, json, openssl, swoole
           coverage: none
           tools: composer:v2
 
@@ -184,6 +184,12 @@ jobs:
 
       - name: Run offline tests
         run: composer test
+
+      - name: Require real Swoole transport runtime
+        run: php -r 'exit(extension_loaded("swoole") && extension_loaded("openssl") ? 0 : 1);'
+
+      - name: Verify local TLS WebSocket transport
+        run: composer test-message-transport
 
       - name: Check coding style
         env:

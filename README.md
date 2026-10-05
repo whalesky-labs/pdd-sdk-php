@@ -42,20 +42,13 @@
 
 ## 安装
 
-项目尚未发布稳定版本到 Packagist。当前可将 GitHub 仓库注册为 Composer VCS 源后安装 `dev-main`：
-
-```bash
-composer config repositories.pdd-sdk-php vcs https://github.com/whalesky-labs/pdd-sdk-php.git
-composer require whalesky-labs/pdd-sdk-php:dev-main
-```
-
-`dev-main` 是开发分支，不提供稳定版本兼容承诺。生产项目应提交自身的 `composer.lock`，并在升级前审查变更；需要严格复现时可在业务项目中锁定已审核的提交引用。
-
-发布稳定版本到 Packagist 后，安装命令将简化为：
+稳定版本已发布至 [Packagist](https://packagist.org/packages/whalesky-labs/pdd-sdk-php)，可直接安装：
 
 ```bash
 composer require whalesky-labs/pdd-sdk-php
 ```
+
+生产项目应提交 `composer.lock`，升级前审查 [更新日志](CHANGELOG.md)。消息接收从 1.1.0 开始提供，其真实平台兼容性仍须应用联调验收。
 
 ## 接口覆盖
 
@@ -403,7 +396,7 @@ tests/                      # 离线单元测试和真实接口测试
 
 ## 版本与变更
 
-稳定版本计划遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。新增能力、行为变化、兼容性说明和修复记录在 [`CHANGELOG.md`](CHANGELOG.md)；尚未发布的内容保留在 `Unreleased` 章节。
+稳定版本遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。新增能力、行为变化、兼容性说明和修复记录在 [`CHANGELOG.md`](CHANGELOG.md)；尚未发布的内容保留在 `Unreleased` 章节。
 
 稳定版本以 GitHub Tag 与 Release 为准，并由 Packagist 自动同步。提交和推送代码不等于发布版本；Tag、Release 和 Packagist 发布应在单独审核后执行。
 
@@ -481,3 +474,9 @@ composer test-integration
 本项目采用 [MIT License](LICENSE)。使用本 SDK 不代表自动获得任何拼多多接口、权限包、商家数据或商标授权，开发者仍需遵守拼多多开放平台的协议、权限和数据合规要求。
 
 “拼多多”及相关标识归其权利人所有。本项目为社区维护项目，不代表拼多多官方背书、认证或支持。
+
+## 消息长连接接收
+
+可通过 `PddClient::messages()` 在 Swoole 协程 worker 中接收消息。客户端只有在业务回调完成可靠保存并返回 `true` 后才发送 ACK，支持心跳和安全关闭，宿主负责重连退避。详见 [消息客户端说明](docs/message-client.md)。普通 RPC 使用不需要 Swoole。
+
+离线协议测试和真实 Swoole 本地 TLS/WebSocket 测试纳入发布检查；真实平台握手、ACK 和重推尚待测试应用验收，不代表已接通平台。

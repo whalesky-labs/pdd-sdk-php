@@ -4,6 +4,15 @@
 
 ## [Unreleased]
 
+### 新增（1.1.0）
+
+- 接续消息接收草稿，新增可选 `PddClient::messages()`、可替换 transport 与原生 Swoole TLS WebSocket 驱动；保持 HTTP/RPC、OAuth 和 PHP-FPM 兼容。
+- 仅严格 true 后 ACK；业务拒绝、解析失败、断线和 ACK 失败关闭会话并交由宿主重连，重投仍进入业务回调。增加单调时钟心跳/超时、每次连接鉴权刷新、64 位精度校验、分片与控制帧处理、安全停止和敏感日志边界。
+- 增加消息回归与真实 Swoole 本地 TLS/WebSocket 测试，并纳入 CI 和发布门禁。
+- 协议验证边界：官方公开指南未给出鉴权算法、完整 ACK 帧及重投 ID 不变承诺；这些仍基于参考实现。未进行真实平台联调，生产接入前必须完成应用验收。
+
+## [1.0.0] - 2026-10-04
+
 ### 新增
 
 - 变更前：仓库只有项目标题，无法调用拼多多开放平台；变更后：提供公共网关、大写 MD5 签名、OAuth、异常处理、原始调用及 `pdd.erp.order.sync` 接口封装。
@@ -16,4 +25,5 @@
 - 变更前：PHP CS Fixer 只检查基础格式，项目文件缺少统一归属说明；变更后：所有维护代码和生成代码统一添加项目、文档、联系人及 License 文件头，重新生成接口时也会保留。
 - 变更前：CI 只能验证代码，无法生成 Packagist 可识别的稳定版本；变更后：维护者可通过手动 Release 工作流自动计算或指定语义化版本，完整验证后创建 Git Tag 与 GitHub Release，并由 Packagist Hook 自动同步。
 
-[Unreleased]: https://github.com/whalesky-labs/pdd-sdk-php/commits/main
+[Unreleased]: https://github.com/whalesky-labs/pdd-sdk-php/compare/v1.0.0...main
+[1.0.0]: https://github.com/whalesky-labs/pdd-sdk-php/releases/tag/v1.0.0

@@ -81,6 +81,12 @@ final class PddClient
         return $this->config;
     }
 
+    /** Create an optional message receiver without affecting HTTP/RPC transport. */
+    public function messages(?\PddSdk\Message\MessageTransportInterface $transport = null): \PddSdk\Message\MessageClient
+    {
+        return new \PddSdk\Message\MessageClient($this->config, $transport ?? new \PddSdk\Message\SwooleMessageTransport());
+    }
+
     public function oauth(): OAuthClient
     {
         return $this->oauthClient;
