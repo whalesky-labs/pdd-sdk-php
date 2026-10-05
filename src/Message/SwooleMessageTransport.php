@@ -70,6 +70,9 @@ final class SwooleMessageTransport implements MessageTransportInterface
             }
             throw new \RuntimeException('Message connection receive failed.');
         }
+        if ($frame === '') {
+            throw new \RuntimeException('Message connection closed by server.');
+        }
         if (! $frame instanceof \Swoole\WebSocket\Frame) {
             throw new \RuntimeException('Message connection returned no WebSocket frame.');
         }

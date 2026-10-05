@@ -95,14 +95,14 @@ final class SwooleMessageTransportTest extends TestCase
             }
         });
         self::assertSame([10, 1, 8], $result['opcodes']);
-        self::assertSame('probe', $result['payloads'][0]);
-        self::assertSame('{"commandType":"Ack"}', $result['payloads'][1]);
+        self::assertSame('probe', base64_decode($result['payloads'][0]));
+        self::assertSame('{"commandType":"Ack"}', base64_decode($result['payloads'][1]));
     }
 
     public function testUntrustedCertificateAndWrongHostnameAreRejected(): void
     {
         foreach ([['localhost', null], ['127.0.0.1', $this->directory . '/ca.pem']] as [$host, $ca]) {
-            $this->server('success', static function (int $port) use ($host, $ca): void {
+            $this->server('tls-reject', static function (int $port) use ($host, $ca): void {
                 $transport = new SwooleMessageTransport($host, $port, $ca);
                 try {
                     $transport->connect('/synthetic');

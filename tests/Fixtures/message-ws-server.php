@@ -28,7 +28,7 @@ $request = '';
 while (! str_contains($request, "\r\n\r\n")) {
     $part = fread($socket, 4096);
     if ($part === false || $part === '') {
-        exit(4);
+        exit($argv[3] === 'tls-reject' ? 0 : 4);
     }
     $request .= $part;
 }
@@ -81,7 +81,7 @@ while (count($opcodes) < 3) {
         $payload[$i] = $payload[$i] ^ $mask[$i % 4];
     }
     $opcodes[] = $opcode;
-    $payloads[] = $payload;
+    $payloads[] = base64_encode($payload);
     if ($opcode === 8) {
         break;
     }
