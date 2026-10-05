@@ -26,13 +26,13 @@ final class SwooleMessageTransportTest extends TestCase
         }
         $this->directory = sys_get_temp_dir() . '/pdd-tls-' . bin2hex(random_bytes(8));
         mkdir($this->directory, 0700);
-        $caKey = openssl_pkey_new(['private_key_bits' => 2048]);
-        $caCsr = openssl_csr_new(['commonName' => 'SDK test CA'], $caKey);
-        $ca = openssl_csr_sign($caCsr, null, $caKey, 1);
+        $caKey = openssl_pkey_new(['private_key_bits' => 2048, 'digest_alg' => 'sha256']);
+        $caCsr = openssl_csr_new(['commonName' => 'SDK test CA'], $caKey, ['digest_alg' => 'sha256']);
+        $ca = openssl_csr_sign($caCsr, null, $caKey, 1, ['digest_alg' => 'sha256']);
         openssl_x509_export_to_file($ca, $this->directory . '/ca.pem');
-        $key = openssl_pkey_new(['private_key_bits' => 2048]);
-        $csr = openssl_csr_new(['commonName' => 'localhost'], $key);
-        $cert = openssl_csr_sign($csr, $ca, $caKey, 1);
+        $key = openssl_pkey_new(['private_key_bits' => 2048, 'digest_alg' => 'sha256']);
+        $csr = openssl_csr_new(['commonName' => 'localhost'], $key, ['digest_alg' => 'sha256']);
+        $cert = openssl_csr_sign($csr, $ca, $caKey, 1, ['digest_alg' => 'sha256']);
         openssl_x509_export_to_file($cert, $this->directory . '/cert.pem');
         openssl_pkey_export_to_file($key, $this->directory . '/key.pem');
     }
