@@ -82,6 +82,7 @@ jobs:
           tools: composer:v2
       - uses: ramsey/composer-install@v3
       - name: Require real Swoole transport runtime
-        run: php -r 'exit(extension_loaded("swoole") && extension_loaded("openssl") ? 0 : 1);'
+        run: |
+          php -r 'exit(extension_loaded("swoole") && extension_loaded("openssl") ? 0 : 1);'
       - name: Test local TLS WebSocket server
         run: composer test-message-transport
